@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "./**/*",
+    "server/**/*",
+    "test/**/*",
+    "types/**/*",
+    "shared/**/*",
+    ".eslintrc.js",
+    "webpack-hmr.config.js"
+  ],
+  "exclude": ["node_modules", "dist/**/*"]
+}

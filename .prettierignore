@@ -1,0 +1,24 @@
+## Root
+node_modules
+pnpm-lock.yaml
+
+# Client
+client/node_modules
+client/.nuxt
+client/.output
+client/assets/fonts
+
+# Server
+server/data
+server/node_modules
+server/dist
+server/src/metadata.ts
+
+# Shared
+shared/node_modules
+shared/src/api.schema.ts
+
+# Tests
+tests/node_modules
+
+.all-contributorsrc

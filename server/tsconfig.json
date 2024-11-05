@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "Node",
+    "removeComments": true,
+    "lib": ["ESNext", "ES2020", "ESNext.AsyncIterable"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "strict": false,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "server/*": ["./*"]
+    },
+    "types": ["node"]
+  },
+  "exclude": ["**/node_modules", "**/dist", "../client/node_modules", "client/node_modules"]
+}

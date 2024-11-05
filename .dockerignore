@@ -1,0 +1,34 @@
+# Files
+npm-debug.log
+.all-contributorsrc
+.editorconfig
+renovate.json
+CHANGELOG.md
+LICENSE
+no-master.sh
+README.md
+webpack.config.js
+.gitignore
+docker-compose.dev.yml
+docker-compose.yml
+
+# Folders
+.github
+.vscode
+.nuxt
+.git
+data
+node_modules
+data
+dist
+out
+channels
+tests
+scripts
+client/node_modules
+client/.output
+client/.nuxt
+server/node_modules
+server/dist
+shared/node_modules
+shared/dist

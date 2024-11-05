@@ -1,0 +1,59 @@
+{
+  "name": "viewtube",
+  "description": "ViewTube, an alternative Youtube frontend.",
+  "author": "moisout",
+  "country": "Switzerland",
+  "email": "viewtube@m-o.dev",
+  "version": "0.17.1",
+  "license": "AGPLv3",
+  "engines": {
+    "node": ">=20.11.0",
+    "pnpm": ">=9.1.0"
+  },
+  "scripts": {
+    "build": "pnpm --filter=* run build",
+    "build:server": "pnpm --filter=./server run build",
+    "build:client": "pnpm --filter=./client run build",
+    "build:shared": "pnpm --filter=./shared run build",
+    "serve:env": "docker compose -f docker-compose.dev.yml up -d",
+    "serve:server": "pnpm --filter=./server run serve",
+    "serve:client": "pnpm --filter=./client run serve",
+    "start": "pnpm --filter=./server run start",
+    "lint-staged": "prettier --write --ignore-unknown",
+    "knip": "knip",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "nuxt:prepare": "pnpm --filter=./client run nuxt:prepare",
+    "e2e": "pnpm --filter=./tests run ci:test",
+    "format": "prettier --write .",
+    "prepare": "node client/scripts/prepare.mjs",
+    "build:metadata": "pnpm --filter=./client run build:metadata",
+    "fix:prettier": "cp node_modules/prettier/index.cjs node_modules/prettier/index.js"
+  },
+  "browserslist": [
+    "last 1 version",
+    "not IE 11",
+    "not IE_Mob 11",
+    "not Edge 18"
+  ],
+  "devDependencies": {
+    "@types/node": "22.7.4",
+    "@typescript-eslint/parser": "8.8.0",
+    "eslint": "9.12.0",
+    "eslint-plugin-cypress": "3.5.0",
+    "globals": "15.10.0",
+    "knip": "5.31.0",
+    "prettier": "3.3.3",
+    "prettier-plugin-organize-imports": "4.1.0",
+    "typescript": "5.6.2"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "papaparse@5.4.1": "patches/papaparse@5.4.1.patch"
+    },
+    "overrides": {
+      "has": "npm:@nolyfill/has@latest",
+      "side-channel": "npm:@nolyfill/side-channel@latest"
+    }
+  }
+}
